@@ -1,0 +1,1 @@
+async function enviarPergunta(){const p=document.getElementById('pergunta').value;const r=document.getElementById('resposta');r.innerHTML='Consultando...';const res=await fetch('https://SEU_BACKEND.vercel.app/perguntar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pergunta:p})});const data=await res.json();r.innerHTML=data.resposta;}
